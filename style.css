@@ -155,7 +155,7 @@ input[type="text"] {
 .arrow{
     position: absolute;
     right: 200px;
-    top: 300px;
+    /* top: 300px; */
     color: #e92626;
 }
 .arrow:hover{
