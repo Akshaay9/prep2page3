@@ -2,113 +2,97 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    }
-    body{
-        width: 100vw;
-        height: 100vh;
-        background-color: white;
-        text-align: center;
-        
-        overflow-x: hidden;
-        
-    }
-.cardContainer
-{
-    width: 70vw;
- background-color: white(240, 168, 60);
- margin:1% 15%;
-    margin-top: 9%;    
-    filter: blur(8px);
+}
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;  
+    
+}
+/* cojntainer */
+.todo-container{
+    margin-top: 42px;
+    width: 23vw;
     -webkit-filter: blur(8px);
-    
 }
-.cardContainerHeader{
+
+/* heading */
+.todo-heading{
     display: flex;
-    justify-content: space-evenly;
-    padding: 6px;
     
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 30px 0;
+    font-size: 2.5rem;
+    /* font-family: sans-serif; */
+    font-weight: bolder;
     
-    
-   
 }
-hr { width:114%; height:2px; background: #fff ;  }
-.card{
-    background-color: white;
-    /* padding: 1%; */
-    padding: 3%;
-    height: 50vh;
-    margin: 2%;
-    line-height: 32px;
-    border: 1px solid rgb(226, 135, 135);
-    border-radius: 12px;
-    align-content: space-between;
-    box-shadow: 1px 2px 5px gray;
-    transition: transform .6s;
+.todo-heading span{
+    font-weight: lighter;
+    font-family: serif;
+    color: rgb(122, 116, 90);
 }
 
-.cards{
-    display: flex;
-    width: 70vw;
-    flex-wrap: wrap  ;
-    justify-content: space-around;  
-    padding: 2%;
-}
-.mainSpan{
-    display: flex;
-    /* margin-left: 79px; */
-   
-}
 
-.task{
-    font-size: 3rem;    
-    font-weight: bold;
-    padding: 12px;
-    
-}
-.list{
-    font-size: 3rem;  
-    padding: 12px; 
-    font-weight: lighter; 
-    color: rgb(122, 122, 122);
-}
-
-.side{
-    font-size: 2.56rem;
-    margin-right: 9px;
-    margin-top: 4px;
-    
-}
-.cardHeader{
-    /* margin-top: -25px; */
-    font-size: 1.5rem;
-    color: rgb(214, 96, 96)  ;
-}
-.cTask{
-    font-size: 20px;
-    color: red;
-    margin-top: 22px;
-    text-decoration: line-through;
-    
-
-}
-.sideIcon{
+/* icon */
+.todo-heading .right{
     color: #e74c4c
+}
+.todo-heading .right:hover{
+    color: #e92626;
+    transform : scale(1.05,1.05)
+}
+.todo-heading .right:active{
+    transform : scale(1.07,1.07)
+}
+
+
+
+
+
+/* todo body */
+.todo-body{
+    text-align: left;
+}
+
+/* card */
+.card{
+    padding-left: 15px;
+    padding: 20px;
+    font-size: 22px;
+    color: rgb(90, 87, 74);
+    margin: 22px 0;
+    box-shadow: 1px 2px 5px gray;
+    border-radius: 6px;
+    border: 1px solid rgb(223, 157, 157);
+    transition: transform .6s;
     
 }
+.card:hover{
+    box-shadow: 10px 10px 10px gray;
+    transform: scale(1.01,1.01);
 
+}
 
-    
-
-.pendingIcon{
-    padding: 12px;
+/* mobile view */
+@media (max-width:600px)  {
+    .todo-container{
+        margin-top: 44px;
+        width: 85vw;
+    }
+    .todo-heading{
+        padding: 12px 0px;
+    }
+    .card{
+        margin: 19px 0;
+    }
 }
 
 
-.pendingTask{
-    font-size: 25px;
-}
+
 
 /* ------------------------------------------ */
 
